@@ -1,12 +1,12 @@
 FactoryGirl.define do
   factory :recipe do
-    name "MyString"
-    cuisine "MyString"
-    food_type "MyString"
+    name "Torta"
+    cuisine "Mineira"
+    food_type "Principal"
     serves 1
-    cooking_time 1
-    level "MyString"
-    ingredients "MyString"
-    directions "MyText"
+    cooking_time 120
+    level "Fácil"
+    ingredients "Vários"
+    directions "Passos"
   end
 end
