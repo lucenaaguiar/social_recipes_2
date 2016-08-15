@@ -3,7 +3,7 @@
     <%= simple_form_for @recipe do |f| %>
       <%= f.input :name, label: 'Nome' %>
       <%= f.input :cuisine_id, collection: @cuisines, prompt: 'Selecione', label_method: :name, value_method: :id, label: 'Cozinha' %>
-      <%= f.input :food_type, label: 'Tipo de comida' %>
+      <%= f.input :food_type_id, collection: @food_types, prompt: 'Selecione', label_method: :name, value_method: :id, label: 'Tipo' %>
       <%= f.input :serves, label: 'Quantidade de pessoas' %>
       <%= f.input :cooking_time, label: 'Tempo de preparo' %>
       <%= f.input :level, label: 'Nível de dificuldade' %>

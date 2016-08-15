@@ -1,0 +1,11 @@
+<section>
+  <div class="">
+    <%= simple_form_for @food_type do |f| %>
+      <%= f.input :name, label: 'Nome' %>
+      <%= f.submit 'Cadastrar Tipo' %>
+    <% end %>
+  </div>
+  <div class="error">
+    <span><%= notice %></span>
+  </div>
+</section>

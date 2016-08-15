@@ -3,4 +3,5 @@ class Recipe < ApplicationRecord
             presence: true
 
   belongs_to :cuisine
+  belongs_to :food_type
 end

@@ -2,7 +2,7 @@ FactoryGirl.define do
   factory :recipe do
     name "Torta"
     cuisine
-    food_type "Principal"
+    food_type
     serves 1
     cooking_time 120
     level "Fácil"
