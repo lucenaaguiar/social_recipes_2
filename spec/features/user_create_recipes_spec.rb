@@ -14,6 +14,7 @@ feature 'User create recipe' do
     fill_in 'Nível de dificuldade', with: 'Fácil'
     fill_in 'Ingredientes', with: 'Massa, Queijo, Molho'
     fill_in 'Passo a passo', with: 'Monte, Asse'
+    attach_file('Foto', "#{Rails.root}/spec/fixtures/lasanha.png")
 
     click_on 'Cadastrar Receita'
 
@@ -25,6 +26,7 @@ feature 'User create recipe' do
     expect(page).to have_content 'Fácil'
     expect(page).to have_content 'Massa, Queijo, Molho'
     expect(page).to have_content 'Monte, Asse'
+    expect(page).to have_xpath("//img[contains(@src,'lasanha.png')]")
   end
 
   scenario 'with invalid data' do
