@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :recipe do
     name "Torta"
-    cuisine "Mineira"
+    cuisine
     food_type "Principal"
     serves 1
     cooking_time 120

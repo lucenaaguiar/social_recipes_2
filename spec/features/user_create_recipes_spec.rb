@@ -2,10 +2,11 @@ require 'rails_helper'
 
 feature 'User create recipe' do
   scenario 'successfully' do
+    create(:cuisine, name: 'Italiana')
     visit new_recipe_path
 
     fill_in 'Nome', with: 'Lasanha'
-    fill_in 'Cozinha', with: 'Italiana'
+    select  'Italiana', from: 'Cozinha'
     fill_in 'Tipo', with: 'Principal'
     fill_in 'Quantidade de pessoas', with: '5'
     fill_in 'Tempo de preparo', with: '120'
@@ -29,7 +30,7 @@ feature 'User create recipe' do
     visit new_recipe_path
 
     fill_in 'Nome', with: ''
-    fill_in 'Cozinha', with: ''
+    select  '', from: 'Cozinha'
     fill_in 'Tipo', with: ''
     fill_in 'Ingredientes', with: ''
     fill_in 'Passo a passo', with: ''

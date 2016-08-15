@@ -1,4 +1,5 @@
 class RecipesController < ApplicationController
+  before_action :set_collections, only: [:new, :create]
   def show
     @recipe = Recipe.find(params[:id])
   end
@@ -20,7 +21,11 @@ class RecipesController < ApplicationController
   private
 
   def set_params
-    params.require(:recipe).permit(:name, :cuisine, :food_type, :serves, :level,
-                                   :cooking_time, :ingredients, :directions)
+    params.require(:recipe).permit(:name, :cuisine_id, :food_type, :directions,
+                                   :level, :cooking_time, :ingredients, :serves)
+  end
+
+  def set_collections
+    @cuisines = Cuisine.all
   end
 end
