@@ -1,16 +1,31 @@
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h1><%= link_to recipe.name, recipe %></h1>
+<div class="card medium">
+  <div class="card-image">
+    <%= image_tag recipe.photo.url(:medium), height: '175', width: '80' %>
+    <span class="card-title"><%= link_to recipe.name, recipe %></span>
+  </div>
+  <div class="card-content">
+    <div class="row">
 
-    <div>
+
+    <dl class="">
+    <div class="col s5">
       <dt>Tipo de Cozinha<dt>
       <dd><%= recipe.cuisine.name %></dd>
       <dt>Tipo de Comida<dt>
       <dd><%= recipe.food_type.name %></dd>
+
+    </div>
+    <div class="col s5">
       <dt>Tempo de Preparo<dt>
       <dd><%= recipe.cooking_time %></dd>
       <dt>Nível de Dificuldade<dt>
       <dd><%= recipe.level %></dd>
-      </div>
+    </div>
+</dl>
+  </div>
+
+  </div>
+  <div class="card-action">
+    <%= link_to 'Ver mais..', recipe %>
   </div>
 </div>
